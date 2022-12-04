@@ -2,7 +2,6 @@ import java.io.File
 
 
 fun main() {
-
     val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\AdventCode\\src\\main\\kotlin\\DataDay2"
     val gameData = File(fileName).readLines()
     val Rock = 1
@@ -12,19 +11,17 @@ fun main() {
     val draw = 3
     val win = 6
     var userScore: Int = 0
-   /*
-     A = "Rock"
-     B = "Paper"
-     C = "Scissor"
-     X = "Rock"
-     Y = "Paper"
-     Z = "Scissor"
-
-    Examples:
-    "C Z" -> Scissor(op) vs Scissor(you) Draw 3+3 = 6 points for you
-    "A Y" -> Rock vs Paper Win 6+1 = 7 points for you
-     */
-
+    /*
+      A = "Rock"
+      B = "Paper"
+      C = "Scissor"
+      X = "Rock"
+      Y = "Paper"
+      Z = "Scissor"
+     Examples:
+     "C Z" -> Scissor(op) vs Scissor(you) Draw 3+3 = 6 points for you
+     "A Y" -> Rock vs Paper Win 6+1 = 7 points for you
+      */
     fun winCheck(data: String): Int {
         when (data[0].toString()) {
             //Rock Win Loss condition
@@ -62,6 +59,7 @@ fun main() {
             }
         }
     }
+
 
     fun dataParse(rpsDataSet: MutableList<String>) {
         var i = 0

@@ -4,9 +4,8 @@ import java.io.File
 fun main() {
     var lineCounter = 0
     val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\AdventCode\\src\\main\\kotlin\\input.txt"
-    var listOfCalories: List<String>
-    listOfCalories = File(fileName).readLines()
-    var listOfCaloriesInt = listOfCalories.map { it.toIntOrNull() }
+    val listOfCalories: List<String> = File(fileName).readLines()
+    val listOfCaloriesInt = listOfCalories.map { it.toIntOrNull() }
     val updatedListOfCalories = mutableListOf<Int>()
     var calorieAcc: Int? = 0
     fun getMaxCalories(elfList: MutableList<Int> = mutableListOf<Int>()) {
