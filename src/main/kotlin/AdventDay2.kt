@@ -3,7 +3,7 @@ import java.io.File
 
 fun main() {
     var lineCounter = 0
-    val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\src\\main\\kotlin\\DataDay2"
+    val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\AdventCode\\src\\main\\kotlin\\DataDay2"
     val gameData = File(fileName).readLines()
     val Rock = 1
     val Paper = 2

@@ -3,7 +3,7 @@ import java.io.File
 
 fun main() {
     var lineCounter = 0
-    val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\src\\main\\kotlin\\input.txt"
+    val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\AdventCode\\src\\main\\kotlin\\input.txt"
     var listOfCalories: List<String>
     listOfCalories = File(fileName).readLines()
     var listOfCaloriesInt = listOfCalories.map { it.toIntOrNull() }
