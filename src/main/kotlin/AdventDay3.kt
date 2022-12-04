@@ -84,9 +84,6 @@ fun main() {
         }
         return commonLetter
     }
-
-
-
     fun rucksackParse(sackinfo: MutableList<String>) {
         var i = 0
         var loopstop = true
@@ -109,7 +106,7 @@ fun main() {
         while(loopstop){
             ruckSackSum += rucksackLetterPriority[stringGroupElfDupCheck(sackinfo.subList(i,i+3))]!!
             if (i == sackinfo.size-3) loopstop = false
-            i = i+3
+            i += 3
         }
         println(ruckSackSum)
 }
