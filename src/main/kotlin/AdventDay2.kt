@@ -2,7 +2,7 @@ import java.io.File
 
 
 fun main() {
-    var lineCounter = 0
+
     val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\AdventCode\\src\\main\\kotlin\\DataDay2"
     val gameData = File(fileName).readLines()
     val Rock = 1
@@ -12,14 +12,14 @@ fun main() {
     val draw = 3
     val win = 6
     var userScore: Int = 0
-    var opScore: Int = 0
-    val A = "Rock"
-    val B = "Paper"
-    val C = "Scissor"
-    val X = "Rock"
-    val Y = "Paper"
-    val Z = "Scissor"
-    /*
+   /*
+     A = "Rock"
+     B = "Paper"
+     C = "Scissor"
+     X = "Rock"
+     Y = "Paper"
+     Z = "Scissor"
+
     Examples:
     "C Z" -> Scissor(op) vs Scissor(you) Draw 3+3 = 6 points for you
     "A Y" -> Rock vs Paper Win 6+1 = 7 points for you
