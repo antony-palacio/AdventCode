@@ -5,7 +5,7 @@ fun main() {
     val fileName = "C:\\Users\\Tony\\IdeaProjects\\Hello_Kotlin\\AdventCode\\src\\main\\kotlin\\DataDay5"
     val gameData = File(fileName).readLines()
 
-    var boardSetUp: MutableList<MutableList<String>> = mutableListOf(
+    val boardSetUp: MutableList<MutableList<String>> = mutableListOf(
         mutableListOf("G", "B", "D", "C", "P", "R"),
         mutableListOf("G", "V", "H"),
         mutableListOf("M", "P", "J", "D", "Q", "S", "N"),
@@ -22,24 +22,44 @@ fun main() {
     val toPositionCrate = moveCrateData.map { it[2].toInt() }
     var i = 0
     var loopstop = true
-
-    while (loopstop) {
-        for (countAdd in range(0, amountOfCratesToMove[i])) { //Add item to destination
-            boardSetUp[toPositionCrate[i] - 1].add(0, boardSetUp[fromPositionCrate[i] - 1][countAdd]) //
+    fun partOneSolution() {
+        while (loopstop) {
+            for (countAdd in range(0, amountOfCratesToMove[i])) { //Add item to destination
+                boardSetUp[toPositionCrate[i] - 1].add(0, boardSetUp[fromPositionCrate[i] - 1][countAdd])
+            }
+            for (countRemove in range(0, amountOfCratesToMove[i])) { //Remove items from crate
+                boardSetUp[fromPositionCrate[i] - 1].removeAt(0)
+            }
+            i++
+            if (i == moveCrateData.size) loopstop = false
         }
-        for (countRemove in range(0,amountOfCratesToMove[i])){ //Remove items from crate
-            boardSetUp[fromPositionCrate[i]-1].removeAt(0)
+        val answerPartOne: MutableList<String> = mutableListOf()
+        for (f in range(0, 9)) { //Part one Answer
+            answerPartOne.add(boardSetUp[f][0])
         }
-        i++
-        if (i == moveCrateData.size) loopstop = false
+        println(answerPartOne)
     }
-    val answer: MutableList<String> = mutableListOf()
-    for (f in range(0,8)){ //Part one Answer
-         answer.add(boardSetUp[f][0])
-    }
-    println(answer)
+//    partOneSolution()
 
-
+    fun partTwoSolution() {
+        while (loopstop) {
+            boardSetUp[toPositionCrate[i] - 1].addAll(
+                0,
+                boardSetUp[fromPositionCrate[i] - 1].take(amountOfCratesToMove[i])
+            )
+            for (countRemove in range(0, amountOfCratesToMove[i])) { //Remove items from crate
+                boardSetUp[fromPositionCrate[i] - 1].removeAt(0)
+            }
+            i++
+            if (i == moveCrateData.size) loopstop = false
+        }
+        val answerPartTwo: MutableList<String> = mutableListOf()
+        for (f in range(0, 9)) { //Part Two Answer
+            answerPartTwo.add(boardSetUp[f][0])
+        }
+        println(answerPartTwo)
     }
+//    partTwoSolution()
+}
 
 
