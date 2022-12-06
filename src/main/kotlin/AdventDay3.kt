@@ -84,12 +84,13 @@ fun main() {
         }
         return commonLetter
     }
+
     fun rucksackParse(sackinfo: MutableList<String>) {
         var i = 0
         var loopstop = true
-        while(loopstop){
+        while (loopstop) {
             ruckSackSum += rucksackLetterPriority[stringSplitDupCheck(sackinfo[i])]!!
-            if (i == sackinfo.size-1) loopstop = false
+            if (i == sackinfo.size - 1) loopstop = false
             i++
         }
 //        Using other loop to verify indexing and sums
@@ -103,13 +104,13 @@ fun main() {
     fun rucksackParsePartTwo(sackinfo: MutableList<String>) {
         var i = 0
         var loopstop = true
-        while(loopstop){
-            ruckSackSum += rucksackLetterPriority[stringGroupElfDupCheck(sackinfo.subList(i,i+3))]!!
-            if (i == sackinfo.size-3) loopstop = false
+        while (loopstop) {
+            ruckSackSum += rucksackLetterPriority[stringGroupElfDupCheck(sackinfo.subList(i, i + 3))]!!
+            if (i == sackinfo.size - 3) loopstop = false
             i += 3
         }
         println(ruckSackSum)
-}
+    }
     rucksackParsePartTwo(gameData as MutableList<String>)
 }
 
