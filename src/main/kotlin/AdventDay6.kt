@@ -28,6 +28,5 @@ fun main() {
     }
 
     partTwoSolution()
-//    println(subTestCase[0].length)
 
 }
