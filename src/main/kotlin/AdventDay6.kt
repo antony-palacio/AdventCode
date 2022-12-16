@@ -10,7 +10,7 @@ fun main() {
         for (i in range(0, gameData.length - 4)) {
             subTestCase = listOf(gameData.substring(i, i + 4)).map { it.toSet().toString() }
             if (subTestCase[0].length == 12) {
-                print(i + 4) //Prints position of signal
+                println(i + 4) //Prints position of signal
                 break
             }
         }
@@ -21,12 +21,11 @@ fun main() {
         for (i in range(0, gameData.length - 14)) {
             subTestCase = listOf(gameData.substring(i, i + 14)).map { it.toSet().toString() }
             if (subTestCase[0].length == 42) {
-                println(i + 14) //Prints position of signal
+                println(i + 14) //Prints position of message
                 break
             }
         }
     }
-
-    partTwoSolution()
-
+    partOneSolution()
+    println(subTestCase[0])
 }

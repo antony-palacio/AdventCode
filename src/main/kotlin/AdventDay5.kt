@@ -59,7 +59,8 @@ fun main() {
         }
         println(answerPartTwo)
     }
-//    partTwoSolution()
+    partTwoSolution()
 }
+
 
 
